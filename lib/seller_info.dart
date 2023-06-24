@@ -74,7 +74,7 @@ class _DetailsPageState extends State<DetailsPage> {
         body: SafeArea(
             child: SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           // SizedBox(
           //   height: 10,
@@ -82,22 +82,22 @@ class _DetailsPageState extends State<DetailsPage> {
           Text(
             'Would you mind sharing these details?',
             style: GoogleFonts.getFont('Nunito',
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                     color: Colors.black,
                     fontSize: 25,
                     fontWeight: FontWeight.w700)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Text(
             'What you produce',
             style: GoogleFonts.getFont('Nunito',
-                textStyle: TextStyle(
-                    color: const Color.fromARGB(255, 169, 169, 169),
+                textStyle: const TextStyle(
+                    color: Color.fromARGB(255, 169, 169, 169),
                     fontSize: 15)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           SingleChildScrollView(
@@ -109,7 +109,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   height: 82,
                   width: 82,
                   child: Card(
-                    color: Color(0xFF44f1a6),
+                    color: const Color(0xFF44f1a6),
                     shape: RoundedRectangleBorder(
                       side: BorderSide(
                         color: _borderColor1,
@@ -126,7 +126,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         child: Text(
                           'Fruits',
                           style: GoogleFonts.getFont('Nunito',
-                              textStyle: TextStyle(
+                              textStyle: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 15,
                                   fontWeight: FontWeight.w700)),
@@ -157,7 +157,7 @@ class _DetailsPageState extends State<DetailsPage> {
                             fit: BoxFit.cover,
                           ),
                         ),
-                        padding: EdgeInsets.all(16),
+                        padding: const EdgeInsets.all(16),
                       ),
                     ),
                   ),
@@ -186,7 +186,7 @@ class _DetailsPageState extends State<DetailsPage> {
                             fit: BoxFit.cover,
                           ),
                         ),
-                        padding: EdgeInsets.all(16),
+                        padding: const EdgeInsets.all(16),
                       ),
                     ),
                   ),
@@ -215,7 +215,7 @@ class _DetailsPageState extends State<DetailsPage> {
                             fit: BoxFit.cover,
                           ),
                         ),
-                        padding: EdgeInsets.all(16),
+                        padding: const EdgeInsets.all(16),
                       ),
                     ),
                   ),
@@ -223,17 +223,17 @@ class _DetailsPageState extends State<DetailsPage> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Text(
             'Your Business Id?',
             style: GoogleFonts.getFont('Nunito',
-                textStyle: TextStyle(
-                    color: const Color.fromARGB(255, 169, 169, 169),
+                textStyle: const TextStyle(
+                    color: Color.fromARGB(255, 169, 169, 169),
                     fontSize: 15)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           SizedBox(
@@ -254,17 +254,17 @@ class _DetailsPageState extends State<DetailsPage> {
                     prefixIcon: const Icon(Icons.numbers_outlined),
                     hintText: "")),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Text(
             'Business Name',
             style: GoogleFonts.getFont('Nunito',
-                textStyle: TextStyle(
-                    color: const Color.fromARGB(255, 169, 169, 169),
+                textStyle: const TextStyle(
+                    color: Color.fromARGB(255, 169, 169, 169),
                     fontSize: 15)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           SizedBox(
@@ -285,17 +285,17 @@ class _DetailsPageState extends State<DetailsPage> {
                     prefixIcon: const Icon(Icons.calendar_month_outlined),
                     hintText: "")),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Text(
             'Your Location',
             style: GoogleFonts.getFont('Nunito',
-                textStyle: TextStyle(
-                    color: const Color.fromARGB(255, 169, 169, 169),
+                textStyle: const TextStyle(
+                    color: Color.fromARGB(255, 169, 169, 169),
                     fontSize: 15)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           SizedBox(
@@ -316,17 +316,17 @@ class _DetailsPageState extends State<DetailsPage> {
                     prefixIcon: const Icon(Icons.house_outlined),
                     hintText: "")),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Text(
             'A short description about your business \n (this will be shown to the buyers))',
             style: GoogleFonts.getFont('Nunito',
-                textStyle: TextStyle(
-                    color: const Color.fromARGB(255, 169, 169, 169),
+                textStyle: const TextStyle(
+                    color: Color.fromARGB(255, 169, 169, 169),
                     fontSize: 15)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           SizedBox(
@@ -347,7 +347,7 @@ class _DetailsPageState extends State<DetailsPage> {
                     prefixIcon: const Icon(Icons.school_outlined),
                     hintText: "")),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           SizedBox(
@@ -355,9 +355,9 @@ class _DetailsPageState extends State<DetailsPage> {
             height: 50,
             child: ElevatedButton(
               style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Color(0xFF44f1a6)),
+                  backgroundColor: MaterialStateProperty.all(const Color(0xFF44f1a6)),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                      RoundedRectangleBorder(
+                      const RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(20),
                               topRight: Radius.circular(20),
@@ -381,7 +381,7 @@ class _DetailsPageState extends State<DetailsPage> {
               child: Text(
                 "Ready to boost your business",
                 style: GoogleFonts.getFont("Poppins",
-                    textStyle: TextStyle(
+                    textStyle: const TextStyle(
                         color: Color.fromARGB(255, 250, 250, 250),
                         fontSize: 20,
                         fontWeight: FontWeight.bold)),
