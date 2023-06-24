@@ -1,6 +1,7 @@
+import 'package:bazaar/Ui/bar.dart';
 import 'package:bazaar/Ui/seller_info.dart';
 import 'package:flutter/material.dart';
-
+import 'Ui/bar.dart';
 import 'Ui/divider.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
             ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 0, 0, 0)),
         useMaterial3: true,
       ),
-      home: const Scaffold(body: DividerPage()),
+      home: Scaffold(body: DividerPage()),
     );
   }
 }
