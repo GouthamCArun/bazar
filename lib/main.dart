@@ -1,4 +1,4 @@
-import 'package:bazaar/seller_info.dart';
+import 'package:bazaar/Ui/seller_info.dart';
 import 'package:flutter/material.dart';
 
 import 'Ui/divider.dart';

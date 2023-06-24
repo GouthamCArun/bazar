@@ -1,3 +1,4 @@
+import 'package:bazaar/Ui/seller_dash.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -109,39 +110,10 @@ class _DetailsPageState extends State<DetailsPage> {
                   height: 82,
                   width: 82,
                   child: Card(
-                    color: Color(0xFF44f1a6),
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                        color: _borderColor1,
-                      ),
-                      // borderRadius: BorderRadius.circular(70), //<-- SEE HERE
-                    ),
-                    child: InkWell(
-                        onTap: () {
-                          _changeBorderColor(1);
-                          print(
-                              '------------------------avatar selected---------' +
-                                  _index.toString());
-                        },
-                        child: Text(
-                          'Fruits',
-                          style: GoogleFonts.getFont('Nunito',
-                              textStyle: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w700)),
-                        )),
-                  ),
-                ),
-                SizedBox(
-                  height: 82,
-                  width: 82,
-                  child: Card(
                     shape: RoundedRectangleBorder(
                       side: BorderSide(
                         color: _borderColor2,
                       ),
-                      borderRadius: BorderRadius.circular(70), //<-- SEE HERE
                     ),
                     child: InkWell(
                       onTap: () {
@@ -153,7 +125,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       child: Container(
                         decoration: const BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('assets/images/woman.png'),
+                            image: AssetImage('assets/burger.png'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -168,13 +140,12 @@ class _DetailsPageState extends State<DetailsPage> {
                   child: Card(
                     shape: RoundedRectangleBorder(
                       side: BorderSide(
-                        color: _borderColor3,
+                        color: _borderColor2,
                       ),
-                      borderRadius: BorderRadius.circular(70), //<-- SEE HERE
                     ),
                     child: InkWell(
                       onTap: () {
-                        _changeBorderColor(3);
+                        _changeBorderColor(2);
                         print(
                             '------------------------avatar selected---------' +
                                 _index.toString());
@@ -182,7 +153,35 @@ class _DetailsPageState extends State<DetailsPage> {
                       child: Container(
                         decoration: const BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('assets/images/man1.png'),
+                            image: AssetImage('assets/burger.png'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        padding: EdgeInsets.all(16),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 82,
+                  width: 82,
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(
+                        color: _borderColor2,
+                      ),
+                    ),
+                    child: InkWell(
+                      onTap: () {
+                        _changeBorderColor(2);
+                        print(
+                            '------------------------avatar selected---------' +
+                                _index.toString());
+                      },
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/burger.png'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -199,7 +198,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       side: BorderSide(
                         color: _borderColor4,
                       ),
-                      borderRadius: BorderRadius.circular(70), //<-- SEE HERE
+                      // borderRadius: BorderRadius.circular(70), //<-- SEE HERE
                     ),
                     child: InkWell(
                       onTap: () {
@@ -211,7 +210,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       child: Container(
                         decoration: const BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('assets/images/woman2.png'),
+                            image: AssetImage('assets/burger.png'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -222,6 +221,50 @@ class _DetailsPageState extends State<DetailsPage> {
                 ),
               ],
             ),
+          ),
+          SizedBox(
+            height: 8,
+          ),
+          Row(
+            children: [
+              Text(
+                '  Grocery',
+                style: GoogleFonts.getFont('Nunito',
+                    textStyle: TextStyle(
+                        color: const Color.fromARGB(255, 169, 169, 169),
+                        fontSize: 15)),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0),
+                child: Text(
+                  '  Grocery',
+                  style: GoogleFonts.getFont('Nunito',
+                      textStyle: TextStyle(
+                          color: const Color.fromARGB(255, 169, 169, 169),
+                          fontSize: 15)),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0),
+                child: Text(
+                  '  Grocery',
+                  style: GoogleFonts.getFont('Nunito',
+                      textStyle: TextStyle(
+                          color: const Color.fromARGB(255, 169, 169, 169),
+                          fontSize: 15)),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0),
+                child: Text(
+                  '  Grocery',
+                  style: GoogleFonts.getFont('Nunito',
+                      textStyle: TextStyle(
+                          color: const Color.fromARGB(255, 169, 169, 169),
+                          fontSize: 15)),
+                ),
+              ),
+            ],
           ),
           SizedBox(
             height: 16,
@@ -237,7 +280,7 @@ class _DetailsPageState extends State<DetailsPage> {
             height: 8,
           ),
           SizedBox(
-            width: 400,
+            width: 450,
             height: 50,
             child: TextField(
                 cursorColor: Colors.blue,
@@ -371,6 +414,10 @@ class _DetailsPageState extends State<DetailsPage> {
                 final place = _place.text;
                 final index = _index;
                 try {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Selldash()),
+                  );
                   print("name is" + name);
                   print("school is" + school);
                   print("place is" + place);
