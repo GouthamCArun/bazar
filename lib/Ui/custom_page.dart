@@ -61,7 +61,7 @@ class _CustomPageState extends State<CustomPage> {
                   ),
                   Center(
                     child: Text(
-                      "Today?",
+                      "Today",
                       style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
                         fontSize: 40,
