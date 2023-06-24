@@ -45,6 +45,7 @@ class _BuyingHomeState extends State<BuyingHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 181, 252, 218),
       bottomNavigationBar: DiamondBottomNavigation(
         //bottom navigation bar
         itemIcons: const [
