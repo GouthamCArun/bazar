@@ -1,5 +1,6 @@
 import 'dart:ffi';
 
+import 'package:bazaar/Ui/display_items.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -150,28 +151,34 @@ class _ReadyPageState extends State<ReadyPage> {
                   height: 20,
                 ),
                 Center(
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 15),
-                    decoration: BoxDecoration(
-                        color: const Color(0xFF44f1a6),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          "Pick items for me",
-                          style: GoogleFonts.poppins(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: const Color.fromARGB(255, 19, 19, 19),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const DisplayPage()));
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 15),
+                      decoration: BoxDecoration(
+                          color: const Color(0xFF44f1a6),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            "Pick items for me",
+                            style: GoogleFonts.poppins(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: const Color.fromARGB(255, 19, 19, 19),
+                            ),
                           ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        const Icon(Icons.arrow_circle_right_outlined),
-                      ],
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          const Icon(Icons.arrow_circle_right_outlined),
+                        ],
+                      ),
                     ),
                   ),
                 ),
