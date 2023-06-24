@@ -114,12 +114,12 @@ class _DetailsPageState extends State<DetailsPage> {
                     child: Card(
                       shape: RoundedRectangleBorder(
                         side: BorderSide(
-                          color: _borderColor2,
+                          color: _borderColor1,
                         ),
                       ),
                       child: InkWell(
                         onTap: () {
-                          _changeBorderColor(2);
+                          _changeBorderColor(1);
                           print(
                               '------------------------avatar selected---------' +
                                   _index.toString());
@@ -127,7 +127,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         child: Container(
                           decoration: const BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage('assets/burger.png'),
+                              image: AssetImage('assets/images/burger.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -155,7 +155,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         child: Container(
                           decoration: const BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage('assets/burger.png'),
+                              image: AssetImage('assets/images/burger.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -170,12 +170,12 @@ class _DetailsPageState extends State<DetailsPage> {
                     child: Card(
                       shape: RoundedRectangleBorder(
                         side: BorderSide(
-                          color: _borderColor2,
+                          color: _borderColor3,
                         ),
                       ),
                       child: InkWell(
                         onTap: () {
-                          _changeBorderColor(2);
+                          _changeBorderColor(3);
                           print(
                               '------------------------avatar selected---------' +
                                   _index.toString());
@@ -183,7 +183,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         child: Container(
                           decoration: const BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage('assets/burger.png'),
+                              image: AssetImage('assets/images/burger.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -212,7 +212,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         child: Container(
                           decoration: const BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage('assets/burger.png'),
+                              image: AssetImage('assets/images/burger.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
