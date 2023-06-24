@@ -1,5 +1,5 @@
 import 'package:bazaar/Ui/buying_home.dart';
-import 'package:bazaar/seller_info.dart';
+import 'package:bazaar/Ui/seller_info.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
