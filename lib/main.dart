@@ -20,8 +20,7 @@ class MyApp extends StatelessWidget {
             ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 0, 0, 0)),
         useMaterial3: true,
       ),
-      home: const Scaffold(
-          backgroundColor: Color(0xfff1f1f1f1), body: DetailsPage()),
+      home: const Scaffold(body: DividerPage()),
     );
   }
 }
