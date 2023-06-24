@@ -1,4 +1,5 @@
 import 'package:bazaar/Ui/buying_home.dart';
+import 'package:bazaar/seller_info.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -63,7 +64,7 @@ class DividerPage extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const BuyingHome()));
+                        builder: (context) => const DetailsPage()));
               },
               child: Container(
                 height: 70,
