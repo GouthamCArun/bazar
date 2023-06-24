@@ -109,29 +109,28 @@ class _DetailsPageState extends State<DetailsPage> {
                   height: 82,
                   width: 82,
                   child: Card(
+                    color: Color(0xFF44f1a6),
                     shape: RoundedRectangleBorder(
                       side: BorderSide(
                         color: _borderColor1,
                       ),
-                      borderRadius: BorderRadius.circular(70), //<-- SEE HERE
+                      // borderRadius: BorderRadius.circular(70), //<-- SEE HERE
                     ),
                     child: InkWell(
-                      onTap: () {
-                        _changeBorderColor(1);
-                        print(
-                            '------------------------avatar selected---------' +
-                                _index.toString());
-                      },
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('assets/images/man2.png'),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        padding: EdgeInsets.all(16),
-                      ),
-                    ),
+                        onTap: () {
+                          _changeBorderColor(1);
+                          print(
+                              '------------------------avatar selected---------' +
+                                  _index.toString());
+                        },
+                        child: Text(
+                          'Fruits',
+                          style: GoogleFonts.getFont('Nunito',
+                              textStyle: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w700)),
+                        )),
                   ),
                 ),
                 SizedBox(
@@ -228,7 +227,7 @@ class _DetailsPageState extends State<DetailsPage> {
             height: 16,
           ),
           Text(
-            'What should I call you?',
+            'Your Business Id?',
             style: GoogleFonts.getFont('Nunito',
                 textStyle: TextStyle(
                     color: const Color.fromARGB(255, 169, 169, 169),
@@ -252,14 +251,14 @@ class _DetailsPageState extends State<DetailsPage> {
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    prefixIcon: const Icon(Icons.person_2_outlined),
+                    prefixIcon: const Icon(Icons.numbers_outlined),
                     hintText: "")),
           ),
           SizedBox(
             height: 16,
           ),
           Text(
-            'How old are you?',
+            'Business Name',
             style: GoogleFonts.getFont('Nunito',
                 textStyle: TextStyle(
                     color: const Color.fromARGB(255, 169, 169, 169),
@@ -290,7 +289,7 @@ class _DetailsPageState extends State<DetailsPage> {
             height: 16,
           ),
           Text(
-            'You Live in',
+            'Your Location',
             style: GoogleFonts.getFont('Nunito',
                 textStyle: TextStyle(
                     color: const Color.fromARGB(255, 169, 169, 169),
@@ -321,7 +320,7 @@ class _DetailsPageState extends State<DetailsPage> {
             height: 16,
           ),
           Text(
-            'Institute where you study',
+            'A short description about your business \n (this will be shown to the buyers))',
             style: GoogleFonts.getFont('Nunito',
                 textStyle: TextStyle(
                     color: const Color.fromARGB(255, 169, 169, 169),
@@ -356,7 +355,7 @@ class _DetailsPageState extends State<DetailsPage> {
             height: 50,
             child: ElevatedButton(
               style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.blue),
+                  backgroundColor: MaterialStateProperty.all(Color(0xFF44f1a6)),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
@@ -364,8 +363,7 @@ class _DetailsPageState extends State<DetailsPage> {
                               topRight: Radius.circular(20),
                               bottomLeft: Radius.circular(20),
                               bottomRight: Radius.circular(20)),
-                          side: BorderSide(
-                              color: Color.fromARGB(255, 243, 238, 238))))),
+                          side: BorderSide(color: Color(0xFF44f1a6))))),
               onPressed: () async {
                 final name = _name.text;
                 final age = _age.text;
@@ -381,7 +379,7 @@ class _DetailsPageState extends State<DetailsPage> {
                 } catch (e) {}
               },
               child: Text(
-                "Let's Quiz",
+                "Ready to boost your business",
                 style: GoogleFonts.getFont("Poppins",
                     textStyle: TextStyle(
                         color: Color.fromARGB(255, 250, 250, 250),
