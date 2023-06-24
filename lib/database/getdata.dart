@@ -5,9 +5,8 @@ class GetDataBase {
 
   listProducts() async {
     return db
-        .collection('Users')
-        .where('saree')
-        .orderBy('rating', descending: true)
+        .collection('Sellers')
+        .where('Saree_present', isEqualTo: true)
         .snapshots();
   }
 }
