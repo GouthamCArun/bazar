@@ -176,7 +176,7 @@ class _DisplayPageState extends State<DisplayPage> {
                                                 child: Row(
                                                   children: [
                                                     Text(
-                                                      '${price['buy']}',
+                                                      '${price['price']}',
                                                       style:
                                                           GoogleFonts.poppins(
                                                         fontWeight:
@@ -210,7 +210,8 @@ class _DisplayPageState extends State<DisplayPage> {
                                                                       .docs[
                                                                           index]
                                                                       .id,
-                                                                  price['buy'],
+                                                                  price[
+                                                                      'prices'],
                                                                   price['url']);
 
                                                               Navigator.of(
