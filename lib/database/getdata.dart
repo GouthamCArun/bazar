@@ -9,4 +9,11 @@ class GetDataBase {
         .where('Saree_present', isEqualTo: true)
         .snapshots();
   }
+
+  updateBuy(userId, old,url) {
+    final docUser = db.collection('Sellers').doc(userId);
+    docUser.update({
+      'Saree': {'buy': old + 1,'url':url},
+    });
+  }
 }

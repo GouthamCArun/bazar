@@ -154,7 +154,7 @@ class _ReadyPageState extends State<ReadyPage> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const DisplayPage()));
+                          builder: (context) => DisplayPage(state: 0,)));
                     },
                     child: Container(
                       padding: const EdgeInsets.symmetric(
