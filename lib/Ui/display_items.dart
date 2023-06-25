@@ -1,10 +1,12 @@
 import 'package:bazaar/database/getdata.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quickalert/models/quickalert_type.dart';
+import 'package:quickalert/widgets/quickalert_dialog.dart';
 
 class DisplayPage extends StatefulWidget {
-  const DisplayPage({super.key});
-
+  DisplayPage({super.key, required this.state});
+  int state;
   @override
   State<DisplayPage> createState() => _DisplayPageState();
 }
@@ -37,16 +39,57 @@ class _DisplayPageState extends State<DisplayPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 20, top: 20, bottom: 20),
-                child: Text(
-                  'Silk Sari',
-                  style: GoogleFonts.poppins(
-                    fontWeight: FontWeight.normal,
-                    fontSize: 30,
-                    color: const Color(0xFF2E384E),
+              Row(
+                children: [
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 20, top: 20, bottom: 20),
+                    child: Text(
+                      'Silk Sari',
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.normal,
+                        fontSize: 30,
+                        color: const Color(0xFF2E384E),
+                      ),
+                    ),
                   ),
-                ),
+                  const SizedBox(
+                    width: 90,
+                  ),
+                  ElevatedButton(
+                      style: const ButtonStyle(
+                          elevation: MaterialStatePropertyAll(10),
+                          backgroundColor:
+                              MaterialStatePropertyAll(Color(0xFF44f1a6))),
+                      onPressed: () {
+                        QuickAlert.show(
+                          context: context,
+                          type: QuickAlertType.confirm,
+                          text: 'Confirm Bidding ',
+                          onConfirmBtnTap: () {
+                            Navigator.of(context).pop();
+                            QuickAlert.show(
+                              context: context,
+                              type: QuickAlertType.success,
+                              text: 'Confirm order',
+                              cancelBtnText: 'OK',
+                              confirmBtnColor: Colors.green,
+                            );
+                          },
+                          confirmBtnText: 'Yes',
+                          cancelBtnText: 'No',
+                          confirmBtnColor: Colors.green,
+                        );
+                      },
+                      child: Text(
+                        'Open Bidding',
+                        style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                          color: Color.fromARGB(255, 38, 38, 38),
+                        ),
+                      ))
+                ],
               ),
               const SizedBox(
                 height: 10,
@@ -143,35 +186,87 @@ class _DisplayPageState extends State<DisplayPage> {
                                                             0xFF2E384E),
                                                       ),
                                                     ),
-                                                    SizedBox(
-                                                      width: 50,
-                                                    ),
-                                                    ElevatedButton(
-                                                      onPressed: () {
-                                                        // Add your action here
-                                                      },
-                                                      style: ElevatedButton
-                                                          .styleFrom(
-                                                        backgroundColor:
-                                                            const Color
-                                                                    .fromARGB(
-                                                                255,
-                                                                181,
-                                                                252,
-                                                                218),
-                                                        shape:
-                                                            RoundedRectangleBorder(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
+                                                    Padding(
+                                                      padding: EdgeInsets.only(
+                                                        left: widget.state == 0
+                                                            ? 50
+                                                            : 30,
                                                       ),
-                                                      child: Text(
-                                                        'Buy',
-                                                        style: TextStyle(
-                                                          color: Colors.white,
-                                                          fontSize: 16.0,
+                                                      child: ElevatedButton(
+                                                        onPressed: () {
+                                                          QuickAlert.show(
+                                                            context: context,
+                                                            type: QuickAlertType
+                                                                .confirm,
+                                                            text:
+                                                                'Confirm order',
+                                                            confirmBtnText:
+                                                                'Yes',
+                                                            onConfirmBtnTap:
+                                                                () {
+                                                              getDataBase.updateBuy(
+                                                                  snapshot
+                                                                      .data!
+                                                                      .docs[
+                                                                          index]
+                                                                      .id,
+                                                                  price['buy'],
+                                                                  price['url']);
+
+                                                              Navigator.of(
+                                                                      context)
+                                                                  .pop();
+                                                              QuickAlert.show(
+                                                                context:
+                                                                    context,
+                                                                type:
+                                                                    QuickAlertType
+                                                                        .success,
+                                                                text:
+                                                                    'Confirm order',
+                                                                cancelBtnText:
+                                                                    'OK',
+                                                                confirmBtnColor:
+                                                                    Colors
+                                                                        .green,
+                                                              );
+                                                            },
+                                                            cancelBtnText: 'No',
+                                                            confirmBtnColor:
+                                                                Colors.green,
+                                                          );
+                                                        },
+                                                        style: ElevatedButton
+                                                            .styleFrom(
+                                                          backgroundColor:
+                                                              const Color
+                                                                      .fromARGB(
+                                                                  255,
+                                                                  181,
+                                                                  252,
+                                                                  218),
+                                                          shape:
+                                                              RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        8.0),
+                                                          ),
+                                                        ),
+                                                        child: Text(
+                                                          widget.state == 0
+                                                              ? 'Buy'
+                                                              : 'Contact',
+                                                          style:
+                                                              const TextStyle(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    22,
+                                                                    22,
+                                                                    22),
+                                                            fontSize: 16.0,
+                                                          ),
                                                         ),
                                                       ),
                                                     )

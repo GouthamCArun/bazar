@@ -211,7 +211,7 @@ class _CustomPageState extends State<CustomPage> {
                                 onPressed: () {
                                   Navigator.of(context).push(MaterialPageRoute(
                                       builder: (context) =>
-                                          const DisplayPage()));
+                                          DisplayPage(state: 1,)));
                                 },
                                 child: Row(
                                   mainAxisSize: MainAxisSize.min,
