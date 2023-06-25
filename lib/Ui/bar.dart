@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   final List<BarChartModel> data = [
     BarChartModel(
       p_name: "Saree",
-      sale: 25,
+      sale: 20,
       color: charts.ColorUtil.fromDartColor(Colors.blueGrey),
     ),
     BarChartModel(

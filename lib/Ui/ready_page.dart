@@ -126,7 +126,7 @@ class _ReadyPageState extends State<ReadyPage> {
                   },
                 ),
                 const SizedBox(
-                  height: 50,
+                  height: 20,
                 ),
                 GestureDetector(
                   onTap: () {
@@ -178,6 +178,30 @@ class _ReadyPageState extends State<ReadyPage> {
                           ),
                           const Icon(Icons.arrow_circle_right_outlined),
                         ],
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 30.0),
+                  child: Container(
+                    width: 350,
+                    height: 150,
+                    decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(20),
+                            topRight: Radius.circular(20)),
+                        color: Color(0xFF44f1a6)),
+                    child: Center(
+                      child: Text(
+                        '____space left for ads____',
+                        style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 22,
+                            color: Color.fromARGB(238, 96, 96, 96)),
                       ),
                     ),
                   ),
