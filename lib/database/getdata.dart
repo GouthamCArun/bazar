@@ -10,10 +10,10 @@ class GetDataBase {
         .snapshots();
   }
 
-  updateBuy(userId, old,url) {
+  updateBuy(userId, old, url, price) {
     final docUser = db.collection('Sellers').doc(userId);
     docUser.update({
-      'Saree': {'buy': old + 1,'url':url},
+      'Saree': {'buy': old + 1, 'url': url, 'price': price},
     });
   }
 }
