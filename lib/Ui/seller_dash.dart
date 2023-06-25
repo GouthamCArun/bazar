@@ -176,28 +176,20 @@ class _SelldashState extends State<Selldash> {
                                   child: Column(
                                     children: [
                                       Text(
-                                        "You got",
+                                        "Profile Views",
                                         style: GoogleFonts.getFont('Nunito',
                                             textStyle: const TextStyle(
                                                 color: Colors.black,
-                                                fontSize: 12,
+                                                fontSize: 20,
                                                 fontWeight: FontWeight.w400)),
                                       ),
                                       Text(
-                                        "5",
+                                        "15",
                                         style: GoogleFonts.getFont('Nunito',
                                             textStyle: const TextStyle(
                                                 color: Colors.black,
-                                                fontSize: 25,
+                                                fontSize: 30,
                                                 fontWeight: FontWeight.w900)),
-                                      ),
-                                      Text(
-                                        "new orders today",
-                                        style: GoogleFonts.getFont('Nunito',
-                                            textStyle: const TextStyle(
-                                                color: Colors.black,
-                                                fontSize: 12,
-                                                fontWeight: FontWeight.w400)),
                                       ),
                                     ],
                                   ),
@@ -217,7 +209,7 @@ class _SelldashState extends State<Selldash> {
                                     child: Column(
                                       children: [
                                         Text(
-                                          "You appeared in ",
+                                          "You appeared in",
                                           style: GoogleFonts.getFont('Nunito',
                                               textStyle: const TextStyle(
                                                   color: Colors.black,
@@ -225,20 +217,20 @@ class _SelldashState extends State<Selldash> {
                                                   fontWeight: FontWeight.w400)),
                                         ),
                                         Text(
-                                          "0",
+                                          "our ad's",
+                                          style: GoogleFonts.getFont('Nunito',
+                                              textStyle: const TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.w400)),
+                                        ),
+                                        Text(
+                                          "8",
                                           style: GoogleFonts.getFont('Nunito',
                                               textStyle: const TextStyle(
                                                   color: Colors.black,
                                                   fontSize: 15,
                                                   fontWeight: FontWeight.w900)),
-                                        ),
-                                        Text(
-                                          "Searches today",
-                                          style: GoogleFonts.getFont('Nunito',
-                                              textStyle: const TextStyle(
-                                                  color: Colors.black,
-                                                  fontSize: 12,
-                                                  fontWeight: FontWeight.w400)),
                                         ),
                                       ],
                                     ),
@@ -251,10 +243,83 @@ class _SelldashState extends State<Selldash> {
                       ],
                     ),
                   )),
-              const SizedBox(
-                height: 10,
-              ),
               HomePage(),
+              Container(
+                  height: 250,
+                  width: 400,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.greenAccent,
+                      boxShadow: [
+                        const BoxShadow(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            blurRadius: 10,
+                            offset: Offset(0, 3))
+                      ]),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      children: [
+                        Text(
+                          "You fall in Level 1 Category ",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.getFont('Nunito',
+                              textStyle: const TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w900)),
+                        ),
+                        Text(
+                          "Service Scheme",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.getFont('Nunito',
+                              textStyle: const TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w900)),
+                        ),
+                        Text(
+                          "Free publicity upto 1 year in our app ui and social media",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.getFont('Nunito',
+                              textStyle: const TextStyle(
+                                  color: Color.fromARGB(255, 61, 61, 61),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w900)),
+                        ),
+                        Text(
+                          "You can avail our App features for free upto 1 year",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.getFont('Nunito',
+                              textStyle: const TextStyle(
+                                  color: Color.fromARGB(255, 61, 61, 61),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w900)),
+                        ),
+                        Text(
+                          "You Service charges in any of your orders upto 1 year",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.getFont('Nunito',
+                              textStyle: const TextStyle(
+                                  color: Color.fromARGB(255, 61, 61, 61),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w900)),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          "                                                     ***terms and conditions apply***",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.getFont('Nunito',
+                              textStyle: const TextStyle(
+                                  color: Color.fromARGB(255, 61, 61, 61),
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w900)),
+                        ),
+                      ],
+                    ),
+                  )),
               Text(
                 "Bid Now !!",
                 style: GoogleFonts.getFont('Nunito',

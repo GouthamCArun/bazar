@@ -239,7 +239,7 @@ class _DetailsPageState extends State<DetailsPage> {
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
                   child: Text(
-                    '  Grocery',
+                    '  fashion',
                     style: GoogleFonts.getFont('Nunito',
                         textStyle: TextStyle(
                             color: const Color.fromARGB(255, 169, 169, 169),
@@ -249,7 +249,7 @@ class _DetailsPageState extends State<DetailsPage> {
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
                   child: Text(
-                    '  Grocery',
+                    '  Bakery',
                     style: GoogleFonts.getFont('Nunito',
                         textStyle: TextStyle(
                             color: const Color.fromARGB(255, 169, 169, 169),
@@ -259,7 +259,7 @@ class _DetailsPageState extends State<DetailsPage> {
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
                   child: Text(
-                    '  Grocery',
+                    '  Others',
                     style: GoogleFonts.getFont('Nunito',
                         textStyle: TextStyle(
                             color: const Color.fromARGB(255, 169, 169, 169),
@@ -421,11 +421,11 @@ class _DetailsPageState extends State<DetailsPage> {
                       context,
                       MaterialPageRoute(builder: (context) => const Selldash()),
                     );
-                    print("name is" + name);
-                    print("school is" + school);
-                    print("place is" + place);
-                    print("age " + age);
-                    print("index " + index.toString());
+                    // print("name is" + name);
+                    // print("school is" + school);
+                    // print("place is" + place);
+                    // print("age " + age);
+                    // print("index " + index.toString());
                   } catch (e) {}
                 },
                 child: Text(
