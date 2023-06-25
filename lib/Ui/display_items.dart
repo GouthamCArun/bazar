@@ -130,14 +130,52 @@ class _DisplayPageState extends State<DisplayPage> {
                                               Padding(
                                                 padding:
                                                     const EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  '${price['buy']}',
-                                                  style: GoogleFonts.poppins(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 25,
-                                                    color:
-                                                        const Color(0xFF2E384E),
-                                                  ),
+                                                child: Row(
+                                                  children: [
+                                                    Text(
+                                                      '${price['buy']}',
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 25,
+                                                        color: const Color(
+                                                            0xFF2E384E),
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      width: 80,
+                                                    ),
+                                                    ElevatedButton(
+                                                      onPressed: () {
+                                                        // Add your action here
+                                                      },
+                                                      style: ElevatedButton
+                                                          .styleFrom(
+                                                        backgroundColor:
+                                                            const Color
+                                                                    .fromARGB(
+                                                                255,
+                                                                181,
+                                                                252,
+                                                                218),
+                                                        shape:
+                                                            RoundedRectangleBorder(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      8.0),
+                                                        ),
+                                                      ),
+                                                      child: Text(
+                                                        'Buy',
+                                                        style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 16.0,
+                                                        ),
+                                                      ),
+                                                    )
+                                                  ],
                                                 ),
                                               )
                                             ],
