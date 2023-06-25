@@ -212,7 +212,8 @@ class _DisplayPageState extends State<DisplayPage> {
                                                                       .id,
                                                                   price['buy'],
                                                                   price['url'],
-                                                                  price['price']);
+                                                                  price[
+                                                                      'price']);
 
                                                               Navigator.of(
                                                                       context)
