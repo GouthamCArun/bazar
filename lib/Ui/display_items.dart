@@ -241,7 +241,7 @@ class _DisplayPageState extends State<DisplayPage> {
                                                             .styleFrom(
                                                           backgroundColor:
                                                               const Color
-                                                                  .fromARGB(
+                                                                      .fromARGB(
                                                                   255,
                                                                   181,
                                                                   252,
