@@ -133,7 +133,7 @@ class _DisplayPageState extends State<DisplayPage> {
                                                 child: Row(
                                                   children: [
                                                     Text(
-                                                      '${price['buy']}',
+                                                      '${price['price']}',
                                                       style:
                                                           GoogleFonts.poppins(
                                                         fontWeight:
@@ -144,7 +144,7 @@ class _DisplayPageState extends State<DisplayPage> {
                                                       ),
                                                     ),
                                                     SizedBox(
-                                                      width: 80,
+                                                      width: 50,
                                                     ),
                                                     ElevatedButton(
                                                       onPressed: () {
